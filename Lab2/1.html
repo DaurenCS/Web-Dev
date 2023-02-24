@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facebook</title>
+
+    <style>
+        body{
+            background-color: #eff1f4;
+            margin-top: 10%;
+            margin-left: 15%;
+            margin-right: 20%;
+            display: grid;
+            grid-template-columns:repeat(auto-fit, minmax(300px,1fr)) ;
+            gap: 30%;
+        }
+        .text{
+            margin-top: 5%;
+        }
+        .autor{
+            border: 10px solid white;
+            border-radius: 15px;
+            background-color: white;
+            text-align: center;
+            box-shadow: 0px 0px 10px 0px #333;
+            width: auto;
+            height: 120%;
+
+        }
+        h1{
+            color: #1877f1;
+            font-family:Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 300%;
+        
+        }
+       
+        #login{
+            display: grid;
+            grid-column: 30%;
+            width: auto;
+            padding: 20px;
+            row-gap: 35%;
+     
+        }
+        input{
+            width: auto;
+            font-size: 120%;
+            height: 150%;
+            background-color: #d1d8ff;
+            border: 1px solid rgb(128, 128, 128);
+            border-radius: 5px;
+            padding-left: 10%;
+            
+
+        }
+        .buttons{
+            display: grid;
+            row-gap: 50%;
+            font-size: 100%;
+            height: 120%;
+            font-family:sans-serif;
+        }
+        #p1{
+            font-family:Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 150%;
+            width: 80%;
+        }
+        .button{
+            font-size: 100%;
+            border: none;
+            transition-duration: 0.4s;
+            cursor: pointer;
+            border: 1px solid rgb(128, 128, 128);
+            border-radius: 5px;
+            color: white;
+            
+        }
+        .button1{
+            background-color: #1877f1;
+        }
+        .button2{
+            background-color:#42B72A;
+        }
+
+        .button1:hover {
+            background-color: #005fda;
+        }
+        .button2:hover {
+            background-color: #299812;
+        }
+    </style>
+</head>
+<body>
+    <div class="text">
+        <h1>Facebook</h1>
+        <p id = "p1">beta Facebook помогает вам всегда оставаться на связи и общаться со своими знакомыми.</p>    
+    </div>
+    <div class = "autor">
+            <div id="login">
+                <input type="email" id="email" name="email" placeholder="Enter your login">
+                <input type="password" id="query" name="password" placeholder="Enter you password">   
+                <div class = "buttons">
+                    <button class = "button button1" style="height: 180%;">Login</button>
+                    <a href="" style="font-family:Arial, Helvetica, sans-serif;">Forget password?</a>
+                    <button class = "button button2" style="height: 150%; width: auto;">Sign in</button>
+                </div>
+            </div>
+    </div>
+</body>
+</html>
