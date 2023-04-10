@@ -14,25 +14,28 @@ export class AlbumsComponent {
     this.albums = [];
     this.newAlbum = {} as album
   }
+
   ngOnInit():void{
     this.getAlbums()
+    window.alert(this.albums[0])
   }
   getAlbums(){
     this.albumService.getAlbums().subscribe((albums) =>{
-      this.albums = albums
+      window.alert(albums);
+      this.albums = albums;
     })
   }
-  addAlbum(){
-    this.albumService.addAlbum(this.newAlbum).subscribe((album)=>{
-      this.albums.push(album)
-      this.newAlbum = {} as album
-    })
-  }
-  deleteAlbum(album:album){
+  // addAlbum(){
+  //   this.albumService.addAlbum(this.newAlbum).subscribe((album)=>{
+  //     this.albums.push(album)
+  //     this.newAlbum = {} as album
+  //   })
+  // }
+  // deleteAlbum(album:album){
 
-    this.albumService.deleteAlbum(album).subscribe(()=>{
-      const index = this.albums.indexOf(album)
-        this.albums.splice(index,1);
-        })
-  }
+  //   this.albumService.deleteAlbum(album).subscribe(()=>{
+  //     const index = this.albums.indexOf(album)
+  //       this.albums.splice(index,1);
+  //       })
+  // }
 }

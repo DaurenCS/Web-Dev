@@ -9,23 +9,23 @@ import {album} from "../products";
   styleUrls: ['./album-details.component.css']
 })
 export class AlbumDetailsComponent {
-  album :album
-  newTitle : string = ""
-  constructor(private route :ActivatedRoute , private albumService:AlbumService) {
-    this.album = {} as album;
-  }
-  ngOnInit():void{
-    this.route.paramMap.subscribe((params)=>{
-      const id = Number(params.get('id'))
-      this.albumService.getAlbum(id).subscribe((album)=>{
-        this.album = album;
-      })
-    })
-  }
-  changeAlbum(){
-    this.albumService.putAlbum(this.album,this.newTitle).subscribe((album)=>{
-      this.album.title = album.title;
-      this.newTitle = ""
-    })
-  }
+  // album :album
+  // newTitle : string = ""
+  // constructor(private route :ActivatedRoute , private albumService:AlbumService) {
+  //   this.album = {} as album;
+  // }
+  // ngOnInit():void{
+  //   this.route.paramMap.subscribe((params)=>{
+  //     const id = Number(params.get('id'))
+  //     this.albumService.getAlbum(id).subscribe((album)=>{
+  //       this.album = album;
+  //     })
+  //   })
+  // }
+  // changeAlbum(){
+  //   this.albumService.putAlbum(this.album,this.newTitle).subscribe((album)=>{
+  //     this.album.title = album.title;
+  //     this.newTitle = ""
+  //   })
+  // }
 }

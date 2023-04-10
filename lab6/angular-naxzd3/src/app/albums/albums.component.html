@@ -2,13 +2,13 @@
 
 <fieldset>
 <!--    <input type="text" [(ngModel)]="newAlbum.id"><br/>-->
-    <textarea [(ngModel)]="newAlbum.title"></textarea><br/>
-    <button (click)="addAlbum()">Add album</button>
+    <!-- <textarea [(ngModel)]="newAlbum.title"></textarea><br/> -->
+    <!-- <button (click)="addAlbum()">Add album</button> -->
 </fieldset>
 
 <div *ngFor="let album of albums">
     <a routerLink="/albums/{{album.id}}">
-       {{album.id}})  {{album.title}}
+       {{album.id}}
     </a>
-    <button (click)="deleteAlbum(album)">delete</button>
+    <!-- <button (click)="deleteAlbum(album)">delete</button> -->
 </div>

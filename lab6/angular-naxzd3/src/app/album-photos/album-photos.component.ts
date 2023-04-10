@@ -9,22 +9,22 @@ import {ActivatedRoute} from "@angular/router";
   styleUrls: ['./album-photos.component.css']
 })
 export class AlbumPhotosComponent {
-  photos: photo[]
-  id:number;
-  constructor(private route:ActivatedRoute,private albumService:AlbumService) {
-    this.photos = [];
-    this.id = 0;
-  }
-  ngOnInit(){
-    this.getPhotos()
-  }
-  getPhotos(){
-    this.route.paramMap.subscribe((param)=>{
-      this.id = Number(param.get('id'))
-      this.albumService.getPhotos(this.id).subscribe((album)=>{
-        this.photos = album
-      })
-    })
+  // photos: photo[]
+  // id:number;
+  // constructor(private route:ActivatedRoute,private albumService:AlbumService) {
+  //   this.photos = [];
+  //   this.id = 0;
+  // }
+  // ngOnInit(){
+  //   this.getPhotos()
+  // }
+  // getPhotos(){
+  //   this.route.paramMap.subscribe((param)=>{
+  //     this.id = Number(param.get('id'))
+  //     this.albumService.getPhotos(this.id).subscribe((album)=>{
+  //       this.photos = album
+  //     })
+  //   })
 
-  }
+  // }
 }
